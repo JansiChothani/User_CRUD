@@ -72,7 +72,7 @@ app.delete("/user/:id", (req,res) => {
            return res.send("User not found...");
         }
         users = users.filter((user) => user.id !== id);
-        return res.status(201).json("User deleted..",)
+        return res.status(200).json("User deleted..",)
     } catch (error) {
         console.log("error " + error);
         res.send("Error in deleting user...")
@@ -81,4 +81,5 @@ app.delete("/user/:id", (req,res) => {
 
 app.listen(3000, () => {
     console.log("Server is running in port 3000");
+
 })
